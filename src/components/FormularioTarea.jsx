@@ -12,7 +12,13 @@ const FormularioTarea = () => {
     //limpiar el imput
     setTarea("");
   };
-
+  //crear una funcion para borrar las tareas
+  const borrarTarea = (tareaBorrar) => {
+    let listaTareaFiltrada = listaTareas.filter(
+      (itemTarea) => itemTarea !== tareaBorrar
+    );
+    setListaTareas(listaTareaFiltrada);
+  };
   return (
     <>
       <Form onSubmit={handleSubmit}>
@@ -28,7 +34,10 @@ const FormularioTarea = () => {
           </Button>
         </Form.Group>
       </Form>
-      <ListaTareas propslistaTareas={listaTareas}></ListaTareas>
+      <ListaTareas
+        propslistaTareas={listaTareas}
+        borrarTarea={borrarTarea}
+      ></ListaTareas>
     </>
   );
 };
