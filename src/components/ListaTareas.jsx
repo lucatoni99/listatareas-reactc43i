@@ -1,7 +1,7 @@
 import { ListGroup } from "react-bootstrap";
 import ItemTarea from "./ItemTarea";
 
-const ListaTareas = () => {
+const ListaTareas = (propsListaTareas) => {
   return (
     <ListGroup>
       <ItemTarea></ItemTarea>
